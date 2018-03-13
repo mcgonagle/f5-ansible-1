@@ -10,8 +10,9 @@
   tasks:
     - name: View system version and LTM configuration
       bigip_command:
-    	user: "{{ username }}"
-    	password: "{{ password }}"
+	  server: "{{ inventory_hostname }}"
+	  user: "{{ username }}"
+	  password: "{{ password }}"
         commands:
           - show /sys version detail
           - list /ltm virtual all
