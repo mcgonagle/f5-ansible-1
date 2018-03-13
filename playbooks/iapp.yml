@@ -32,9 +32,4 @@
         user: "{{ username }}"
         password: "{{ password }}"
         validate_certs: no
-
-    - import_tasks: slack.yml
-      vars:
-        msg: "Service template *{{ service_name }}*"
-
 ...
