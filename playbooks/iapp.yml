@@ -1,7 +1,7 @@
 ---
 
 - name: "Declarative: Deploy / teardown a service template (iApp)"
-  hosts: bigips
+  hosts: all
   gather_facts: False
   connection: local
 
@@ -28,8 +28,8 @@
         method: "{{ (state == 'present') | ternary('POST', 'DELETE') }}"
         body: "{{ (lookup('template','f5.http.yml') | from_yaml) }}"
         body_format: json
-        user: "{{ bigip_user }}"
-        password: "{{ bigip_pass }}"
+        user: "{{ username }}"
+        password: "{{ password }}"
         validate_certs: no
 
     - import_tasks: slack.yml
