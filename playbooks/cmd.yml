@@ -12,7 +12,6 @@
       bigip_command:
     	user: "{{ username }}"
     	password: "{{ password }}"
-		server: "{{ inventory_hostname }}"
         commands:
           - show /sys version detail
           - list /ltm virtual all
