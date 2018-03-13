@@ -20,7 +20,7 @@ vars:
   net__v13_tcp: "yes"
   net__vlan_mode: all
   pool__addr: "{{ service_ip }}"
-  pool__mask: "255.255.255.0"
+  pool__mask: "255.255.255.255"
   pool__fallback_persist: "/#source#"
   pool__http: "/#create_new#"
   pool__lb_method: least-connections-member
